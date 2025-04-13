@@ -1,0 +1,35 @@
+#!/usr/bin/env python3
+
+# allow for calling method on other file paths using path parameter
+def parse_status_file(path='var/lib/dpkg/status'):
+  user_installed = []
+
+  with open(path, 'r', encoding='utf-8') as file:
+    package_info = {}
+    for line in file:
+      if line.strip() == '':
+        # when we hit a blank line, we hit the end of a package entry, then check if package was manually installed
+        if (
+          'Status' in package_info and
+          'install ok installed' in package_info['Status'] and
+          'Auto-Installed' not in package_info
+        ):
+          # due to Debian package management we assume absence of the auto-installed field means manual installation
+          user-installed.append(package_info.get('Package', ''))
+        package_info = {}
+      else:
+        # build a dictionary with package metadata in order to decide if it should be included in final result
+        key, _, value = line.partition(':')
+        package_info[key.strip()] = value.strip()
+
+  return sorted(user_installed)
+
+def main():
+  packages = parse_status_file()
+  print('User-installed packages:')
+  for pkg in packages:
+    print(pkg)
+
+# ensures the script only runs when executed directly, not when imported as a module into another script.
+if __name__ == '__main__':
+  main()
