@@ -1,0 +1,43 @@
+name: Build and Package Debian Package
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout the code from the repository
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    # Step 2: Set up Python environment
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    # Step 3: Install dependencies
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y python3-dev dpkg-dev fakeroot build-essential
+
+    # Step 4: Build the Debian package
+    - name: Build the Debian package
+      run: |
+        cd debian
+        dpkg-deb --build . ./apt-world.deb
+
+    # Step 5: Upload the Debian package as an artifact
+    - name: Upload Debian package as an artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: apt-world-package
+        path: ./apt-world.deb
