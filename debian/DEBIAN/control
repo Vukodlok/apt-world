@@ -1,0 +1,10 @@
+Package: apt-world
+Version: 1.0
+Section: utils
+Priority: optional
+Architecture: all
+Depends: python3
+Maintainer: Mark Robuck <mrmarkrobuck@gmail.com>
+Description: Lists user-installed packages on Debian.
+ A Python script that parses /var/lib/dpkg/status to
+ show explicitly installed packages.
