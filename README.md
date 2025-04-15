@@ -50,5 +50,5 @@ MIT License. See LICENSE for details.
 
 Mark Robuck  
 [GitHub](https://github.com/Vukodlok)  
-[LinkedIn](linkedin.com/in/mark-robuck)  
+[LinkedIn](https://www.linkedin.com/in/mark-robuck-b4756620/)  
 [Portfolio Website](https://mrmarkrobuck.wordpress.com)
