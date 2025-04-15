@@ -15,7 +15,7 @@ def parse_status_file(path='/var/lib/dpkg/status'):
           'Auto-Installed' not in package_info
         ):
           # due to Debian package management we assume absence of the auto-installed field means manual installation
-          user-installed.append(package_info.get('Package', ''))
+          user_installed.append(package_info.get('Package', ''))
         package_info = {}
       else:
         # build a dictionary with package metadata in order to decide if it should be included in final result
