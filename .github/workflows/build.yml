@@ -35,7 +35,13 @@ jobs:
         cd debian
         dpkg-deb --build . ./apt-world.deb
 
-    # Step 5: Upload the Debian package as an artifact
+    # Step 5: Test installing the Debian package
+    - name: Test Debian package installation
+      run: |
+        sudo dpkg -i apt-world.deb
+        apt-world --help
+
+    # Step 6: Upload the Debian package as an artifact
     - name: Upload Debian package as an artifact
       uses: actions/upload-artifact@v4
       with:
