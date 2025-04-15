@@ -28,7 +28,7 @@ sudo dpkg -i apt-world.deb
 
 Once installed, run:
 
-`bash apt-world`
+`apt-world`
 
 ### Example Output
 
@@ -40,7 +40,7 @@ python3
 
 ### Run Locally
 
-`bash python3 apt-world.py`
+`python3 apt-world.py`
 
 ## License
 
@@ -48,7 +48,7 @@ MIT License. See LICENSE for details.
 
 ## Author
 
-Mark Robuck
-[GitHub](https://github.com/Vukodlok)
-[LinkedIn](linkedin.com/in/mark-robuck)
+Mark Robuck  
+[GitHub](https://github.com/Vukodlok)  
+[LinkedIn](linkedin.com/in/mark-robuck)  
 [Portfolio Website](https://mrmarkrobuck.wordpress.com)
