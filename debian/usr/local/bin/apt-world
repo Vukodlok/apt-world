@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # allow for calling method on other file paths using path parameter
-def parse_status_file(path='var/lib/dpkg/status'):
+def parse_status_file(path='/var/lib/dpkg/status'):
   user_installed = []
 
   with open(path, 'r', encoding='utf-8') as file:
