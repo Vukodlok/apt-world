@@ -46,4 +46,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: apt-world-package
-        path: debian/apt-world.deb
+        path: ./apt-world.deb
