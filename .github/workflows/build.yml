@@ -33,7 +33,7 @@ jobs:
     - name: Build the Debian package
       run: |
         cd debian
-        dpkg-deb --build . ./apt-world.deb
+        dpkg-deb --build . ../apt-world.deb
 
     # Step 5: Test installing the Debian package
     - name: Test Debian package installation
