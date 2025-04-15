@@ -18,7 +18,7 @@ This repository includes a **Debian package** that installs the script to `/usr/
 ### Option 2: Clone and Build Locally
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/apt-world.git
+git clone https://github.com/Vukodlok/apt-world.git
 cd apt-world
 dpkg-deb --build debian
 sudo dpkg -i apt-world.deb
@@ -28,7 +28,7 @@ sudo dpkg -i apt-world.deb
 
 Once installed, run:
 
-`bash apt-world
+`bash apt-world`
 
 ### Example Output
 
@@ -40,7 +40,7 @@ python3
 
 ### Run Locally
 
-`bash python3 apt-world.py
+`bash python3 apt-world.py`
 
 ## License
 
