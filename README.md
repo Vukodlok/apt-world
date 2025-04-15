@@ -32,10 +32,10 @@ Once installed, run:
 
 ### Example Output
 
-bash
-build-essential
-curl
-git
+bash  
+build-essential  
+curl  
+git  
 python3
 
 ### Run Locally
